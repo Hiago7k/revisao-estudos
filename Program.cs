@@ -45,27 +45,36 @@
 // }
 
 
-Console.WriteLine("========Calculadora=======");
-Console.WriteLine("Digite um Numero: ");
-int primeiroNumero = Convert.ToInt32(Console.ReadLine()!);
-Console.WriteLine("Digite outro Numero: ");
-int segundoNumero = Convert.ToInt32(Console.ReadLine()!);
+// Console.WriteLine("========Calculadora=======");
+// Console.WriteLine("Digite um Numero: ");
+// int primeiroNumero = Convert.ToInt32(Console.ReadLine()!);
+// Console.WriteLine("Digite outro Numero: ");
+// int segundoNumero = Convert.ToInt32(Console.ReadLine()!);
 
-Console.WriteLine("Escolha uma das opcoes abaixo!");
-Console.WriteLine("1. Somar");
-Console.WriteLine("2. Subtrair");
-int resposta = Convert.ToInt32(Console.ReadLine()!);
+// Console.WriteLine("Escolha uma das opcoes abaixo!");
+// Console.WriteLine("1. Somar");
+// Console.WriteLine("2. Subtrair");
+// int resposta = Convert.ToInt32(Console.ReadLine()!);
 
-switch(resposta)
-{
-    case 1:
-        Console.WriteLine(primeiroNumero + segundoNumero);
-    break;
-    case 2:  
-         Console.WriteLine(primeiroNumero - segundoNumero);
-    break;   
+// switch(resposta)
+// {
+//     case 1:
+//         Console.WriteLine(primeiroNumero + segundoNumero);
+//     break;
+//     case 2:  
+//          Console.WriteLine(primeiroNumero - segundoNumero);
+//     break;   
     
-    default:
-        Console.WriteLine("Erro");
-    break;
+//     default:
+//         Console.WriteLine("Erro");
+//     break;
+// }
+
+List<string> ListaDeNomes = new List<string>{"Hiago", "Ricardo", "Nathalia"};
+
+foreach (string nomes in ListaDeNomes)
+{
+    Console.WriteLine(nomes);
 }
+
+
