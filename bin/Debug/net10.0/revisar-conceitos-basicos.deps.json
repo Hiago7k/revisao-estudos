@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "revisar-conceitos-basicos/1.0.0": {
+        "runtime": {
+          "revisar-conceitos-basicos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "revisar-conceitos-basicos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
