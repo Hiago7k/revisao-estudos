@@ -34,14 +34,38 @@
 // }
 
 
-Boolean interruptor = false; // faz a magica
+// Boolean interruptor = false; // faz a magica
+
+// while(interruptor)
+// {
+//     for(int i = 0; i < 100; i++)
+//     {
+//         Console.WriteLine(i);
+//     }
+// }
 
 
-while(interruptor)
+Console.WriteLine("========Calculadora=======");
+Console.WriteLine("Digite um Numero: ");
+int primeiroNumero = Convert.ToInt32(Console.ReadLine()!);
+Console.WriteLine("Digite outro Numero: ");
+int segundoNumero = Convert.ToInt32(Console.ReadLine()!);
+
+Console.WriteLine("Escolha uma das opcoes abaixo!");
+Console.WriteLine("1. Somar");
+Console.WriteLine("2. Subtrair");
+int resposta = Convert.ToInt32(Console.ReadLine()!);
+
+switch(resposta)
 {
-    for(int i = 0; i < 100; i++)
-    {
-        Console.WriteLine(i);
-    }
+    case 1:
+        Console.WriteLine(primeiroNumero + segundoNumero);
+    break;
+    case 2:  
+         Console.WriteLine(primeiroNumero - segundoNumero);
+    break;   
+    
+    default:
+        Console.WriteLine("Erro");
+    break;
 }
-
