@@ -12,3 +12,4 @@ C:\Users\hiago\Desktop\revisar-conceitos-basicos\obj\Debug\net10.0\refint\revisa
 C:\Users\hiago\Desktop\revisar-conceitos-basicos\obj\Debug\net10.0\revisar-conceitos-basicos.pdb
 C:\Users\hiago\Desktop\revisar-conceitos-basicos\obj\Debug\net10.0\revisar-conceitos-basicos.genruntimeconfig.cache
 C:\Users\hiago\Desktop\revisar-conceitos-basicos\obj\Debug\net10.0\ref\revisar-conceitos-basicos.dll
+C:\Users\hiago\Desktop\revisar-conceitos-basicos\obj\Debug\net10.0\revisar-conceitos-basicos.sourcelink.json

@@ -9,23 +9,26 @@
 
 // 1 Solicitar ao usuario dizer o seu nome e sua idade e dizer ola nome do usuario voce tem idade do usuario
 
-Console.WriteLine("Ola qual o seu nome?");
-string nome = Console.ReadLine()!;
+// Console.WriteLine("Ola qual o seu nome?");
+// string nome = Console.ReadLine()!;
 
-Console.WriteLine($"Ola {nome}");
+// Console.WriteLine($"Ola {nome}");
 
-Console.WriteLine("Qual sua idade?");
-int idade = Convert.ToInt32(Console.ReadLine()!);
-Console.WriteLine($"{nome} voce tem {idade} anos!");
+// Console.WriteLine("Qual sua idade?");
+// int idade = Convert.ToInt32(Console.ReadLine()!);
+// Console.WriteLine($"{nome} voce tem {idade} anos!");
 
-if (idade >= 18)
+// if (idade >= 18)
+// {
+//     Console.WriteLine("Voce pode tirar sua CNH");
+// }
+// else
+// {
+//     Console.WriteLine("voce ainda e de menor");
+// }
+
+
+for (int i = 0; i <= 10; i++)
 {
-    Console.WriteLine("Voce pode tirar sua CNH");
+    Console.WriteLine(i);
 }
-else
-{
-    Console.WriteLine("voce ainda e de menor");
-}
-
-
-
