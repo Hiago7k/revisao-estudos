@@ -84,11 +84,17 @@ Console.WriteLine("2. vender skins: ");
 Console.WriteLine("3. Apenas ver as skins disponiveis: ");
 int escolha = Convert.ToInt32(Console.ReadLine()!);
 
+// Precisamos criar 3 Classes
+// 1 de Compra de Skins
+// 2 de venda de skins
+// 3 Estoque de skins
+
+// apos criar essas classes precisamos estenciar esse objetos
 
 switch(escolha)
 {
     case 1:
-        Console.WriteLine("Exibir Skins Disponiveis para  commpra");
+
     break;
     case 2:
         Console.WriteLine("Como vender suas skins");
