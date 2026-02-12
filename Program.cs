@@ -8,7 +8,6 @@ Console.WriteLine("3. Comprar skins: ");
 int escolha = Convert.ToInt32(Console.ReadLine()!);
 
 
-var Comprar = new ComprarSkins ("ak-47 Vulcan", 100);
 
 switch(escolha)
 {
