@@ -13,4 +13,13 @@ namespace revisar_conceitos_basicos.Componentsp;
      // public int MyProperty { get; set; } Estrutura de uma propriedade, get e set define oque o usuario pode fazer
         public string NomeDaSkin;
         public int ValorDaSkin;      
+
+        // Agora podemos criar um Metodo para fazer algo
+
+      public void Executar()
+    {
+        Console.WriteLine("Parabens voce comprou a skins");
     }
+        
+    }
+  

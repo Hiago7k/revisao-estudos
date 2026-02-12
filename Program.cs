@@ -64,7 +64,7 @@
 //     case 2:  
 //          Console.WriteLine(primeiroNumero - segundoNumero);
 //     break;   
-    
+
 //     default:
 //         Console.WriteLine("Erro");
 //     break;
@@ -76,6 +76,8 @@
 // {
 //     Console.WriteLine(nomes);
 // }
+
+using revisar_conceitos_basicos.Componentsp;
 
 Console.WriteLine("Seja bem vindo a loja de skins de cs 2");
 Console.WriteLine("Oque voce busca hoje?");
@@ -91,10 +93,16 @@ int escolha = Convert.ToInt32(Console.ReadLine()!);
 
 // apos criar essas classes precisamos estenciar esse objetos
 
+// Agora vamos estenciar o nosso objeto que vem da classe ComprarSkins
+
+var Comprar = new ComprarSkins ("ak-47 Vulcan", 100);
+
 switch(escolha)
 {
     case 1:
-
+        Console.WriteLine("Escolhendo skin...");
+        Console.WriteLine("Parabens voce comrpou uma skin aleatoria");
+        Comprar.Executar();
     break;
     case 2:
         Console.WriteLine("Como vender suas skins");
