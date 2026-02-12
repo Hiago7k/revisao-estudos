@@ -70,11 +70,33 @@
 //     break;
 // }
 
-List<string> ListaDeNomes = new List<string>{"Hiago", "Ricardo", "Nathalia"};
+// List<string> ListaDeNomes = new List<string>{"Hiago", "Ricardo", "Nathalia"};
 
-foreach (string nomes in ListaDeNomes)
+// foreach (string nomes in ListaDeNomes)
+// {
+//     Console.WriteLine(nomes);
+// }
+
+Console.WriteLine("Seja bem vindo a loja de skins de cs 2");
+Console.WriteLine("Oque voce busca hoje?");
+Console.WriteLine("1. Comprar skins: ");
+Console.WriteLine("2. vender skins: ");
+Console.WriteLine("3. Apenas ver as skins disponiveis: ");
+int escolha = Convert.ToInt32(Console.ReadLine()!);
+
+
+switch(escolha)
 {
-    Console.WriteLine(nomes);
+    case 1:
+        Console.WriteLine("Exibir Skins Disponiveis para  commpra");
+    break;
+    case 2:
+        Console.WriteLine("Como vender suas skins");
+    break;
+    case 3:
+        Console.WriteLine("Exibir estoque de skins");
+    break;
+    default:
+        Console.WriteLine("Opcao invalida por gentileza escolha uma opcao valida!");
+    break;
 }
-
-
