@@ -11,6 +11,8 @@ public class Estoque
         {"Glock Fade", new List<int> {8000}}
       };
 
+        
+
 
     public void ExibirEstoque()
     {
@@ -20,7 +22,7 @@ public class Estoque
 
             foreach (var valor in estoque.Value)
             {
-                Console.WriteLine($"Valor das skins {valor}");
+                Console.WriteLine($"Valor da skin {valor}");
                 Console.WriteLine("--------------------------------------");
             }
 
