@@ -1,19 +1,29 @@
 using System.ComponentModel;
-
 namespace revisar_conceitos_basicos.Components;
 
-// Nosso estoque de skins precisar ter um Dicionario com Nome Da Skins e Valor da Skin
+public class Estoque
+{
+    private Dictionary<string, List<int>> EstoqueDeSkins = new Dictionary<string, List<int>>
+       {
+        {"Ak ReadLine", new List<int> {70}},
+        {"Awp RedLine", new List<int> {130}},
+        {"Desert Eagle PrintStream", new List<int> {230}},
+        {"Glock Fade", new List<int> {8000}}
+      };
 
-    public class Estoque
+
+    public void ExibirEstoque()
     {
-       public Dictionary<string, List<int>> EstoqueDeSkins = new  Dictionary<string, List<int>>(); 
-
-        public Estoque(string nomedaskin, int valordaskin)
+        foreach (var estoque in EstoqueDeSkins)
         {
-            NomeDaSkin = nomedaskin;
-            ValorDaSkin = valordaskin;
-        }
+            Console.WriteLine($"Skins disponiveis no estoque {estoque.Key}");
 
-       public string NomeDaSkin;
-       public int ValorDaSkin;
+            foreach (var valor in estoque.Value)
+            {
+                Console.WriteLine($"Valor das skins {valor}");
+                Console.WriteLine("--------------------------------------");
+            }
+
+        }
     }
+}

@@ -9,43 +9,20 @@ Console.WriteLine("2. vender skins: ");
 Console.WriteLine("3. Comprar skins: ");
 int escolha = Convert.ToInt32(Console.ReadLine()!);
 
-var EstoqueSkins = new Estoque("EstoqueDeSkins", 2);
+var EstoqueSkins = new Estoque();
 
-
-
-Dictionary<string, List<int>> EstoqueDeSkins = new  Dictionary<string, List<int>>
-{
-    {"Ak ReadLine", new List<int> {70}},
-    {"Awp RedLine", new List<int> {130}},
-    {"Desert Eagle PrintStream", new List<int> {230}},
-    {"Glock Fade", new List<int> {8000}}
-};
-
-foreach (var estoque in EstoqueDeSkins)
-{
-    Console.WriteLine($"Skins disponiveis no estoque {estoque.Key}");
-
-    foreach (var valor in estoque.Value)
-    {
-        Console.WriteLine($"Valor das skins {valor}");
-        Console.WriteLine("--------------------------------------");
-    }
-
-}
-
-switch(escolha)
+switch (escolha)
 {
     case 1:
-         // Estoque de skins
-    break;
+            Console.WriteLine("Atualmente essas sao nossas skins disponiveis para compra");
+            EstoqueSkins.ExibirEstoque();
+        break;
     case 2:
         Console.WriteLine("Como vender suas skins");
-    break;
+        break;
     case 3:
-    break;
+        break;
     default:
         Console.WriteLine("Opcao invalida por gentileza escolha uma opcao valida!");
-    break;
+        break;
 }
-
-
