@@ -3,18 +3,24 @@ namespace revisar_conceitos_basicos.Components;
 
 public class Estoque
 {
-    private Dictionary<string, List<int>> EstoqueDeSkins = new Dictionary<string, List<int>>
+    private Dictionary<string, int> EstoqueDeSkins = new Dictionary<string, int>
        {
-        {"Ak ReadLine", new List<int> {70}},
-        {"Awp RedLine", new List<int> {130}},
-        {"Desert Eagle PrintStream", new List<int> {230}},
-        {"Glock Fade", new List<int> {8000}}
+        {"Ak ReadLine", 70},
+        {"Awp RedLine", 130},
+        {"Desert Eagle PrintStream", 230},
+        {"Glock Fade", 5000}
       };
 
     public void Executar()
     {
-     var SkinEscolhidaQueDesejaComprar = new Dictionary<string, List<int>>(EstoqueDeSkins);
-    
+     var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
+    if(SkinEscolhidaQueDesejaComprar.ContainsKey(EstoqueDeSkins))
+        {
+            Console.WriteLine("Sucesso");
+        }else
+        {
+            Console.WriteLine("Fracasso");
+        }
 
     }
 
