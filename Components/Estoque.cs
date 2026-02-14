@@ -13,8 +13,9 @@ public class Estoque
 
     public void Executar()
     {
-     var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
-    if(SkinEscolhidaQueDesejaComprar.ContainsKey(EstoqueDeSkins))
+      var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
+      string skinCompradaPeloUsuario = Console.ReadLine()!;
+    if(SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
         {
             Console.WriteLine("Sucesso");
         }else
@@ -31,7 +32,7 @@ public class Estoque
         {
             Console.WriteLine($"Skins disponiveis no estoque {estoque.Key}");
 
-            foreach (var valor in estoque.Value)
+            foreach (var valor in estoque.Key)
             {
                 Console.WriteLine($"Valor da skin {valor}");
                 Console.WriteLine("--------------------------------------");
