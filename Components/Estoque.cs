@@ -11,7 +11,12 @@ public class Estoque
         {"Glock Fade", new List<int> {8000}}
       };
 
-        
+    public void Executar()
+    {
+     var SkinEscolhidaQueDesejaComprar = new Dictionary<string, List<int>>(EstoqueDeSkins);
+    
+
+    }
 
 
     public void ExibirEstoque()
@@ -25,7 +30,6 @@ public class Estoque
                 Console.WriteLine($"Valor da skin {valor}");
                 Console.WriteLine("--------------------------------------");
             }
-
         }
     }
 }

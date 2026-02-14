@@ -9,9 +9,6 @@ namespace revisar_conceitos_basicos.Components;
 
         public int Saldo { get; }
 
-
-
-
         public void MostrarSaldo()
     {
         Console.WriteLine($"Seu saldo atual e de {Saldo}");
