@@ -3,7 +3,7 @@ namespace revisar_conceitos_basicos.Components;
 
 public class Estoque
 {
-    public decimal Saldo = 1000;
+    public int Saldo = 1000;
 
     private Dictionary<string, int> EstoqueDeSkins = new Dictionary<string, int>
        {
@@ -54,9 +54,11 @@ public class Estoque
             else
             {
                 Console.Clear();
-                System.Console.WriteLine("------------------------------------------------------");
+                System.Console.WriteLine("------------------------------------------------------------------------");
                 Console.WriteLine($"Sucesso voce comprou a skin {skinCompradaPeloUsuario} pelo valor de R$ {skinGet}");
-                System.Console.WriteLine("------------------------------------------------------");
+                Saldo -= skinGet;
+                Console.WriteLine($"Seu saldo atual e de {Saldo}");
+                System.Console.WriteLine("------------------------------------------------------------------------");
             }
         }
         else

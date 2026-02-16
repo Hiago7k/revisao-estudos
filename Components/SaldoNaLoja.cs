@@ -1,16 +1,16 @@
-namespace revisar_conceitos_basicos.Components;
+// namespace revisar_conceitos_basicos.Components;
 
-    public class SaldoNaLoja
-    {
-        public SaldoNaLoja(int saldo)
-        {
-            Saldo = saldo;
-        }
+//     public class SaldoNaLoja
+//     {
+//         public SaldoNaLoja(int saldo)
+//         {
+//             Saldo = saldo;
+//         }
 
-        public int Saldo { get; }
+//         public int Saldo { get; }
 
-        public void MostrarSaldo()
-    {
-        Console.WriteLine($"Seu saldo atual e de {Saldo}");
-    }
-    }
+//         public void MostrarSaldo()
+//     {
+//         Console.WriteLine($"Seu saldo atual e de {Saldo}");
+//     }
+//     }
