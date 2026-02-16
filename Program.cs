@@ -17,18 +17,19 @@ switch (escolha)
             Console.WriteLine("Atualmente essas sao nossas skins disponiveis para compra");
             // EstoqueSkins.ExibirEstoque();
         break;
+        
     case 2:
         Console.WriteLine("Como vender suas skins");
         break;
-    case 3:
 
+    case 3:
         Console.WriteLine("Seu valor disponivel para gastar e de!");
         EstoqueSkins.MostrarSaldo();
         Console.WriteLine("Por gentileza digite a skin que deseja comprar: ");
-        
-        EstoqueSkins.Executar();
 
+        EstoqueSkins.Executar();
         break;
+
     default:
         Console.WriteLine("Opcao invalida por gentileza escolha uma opcao valida!");
         break;

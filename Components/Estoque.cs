@@ -3,7 +3,7 @@ namespace revisar_conceitos_basicos.Components;
 
 public class Estoque
 {
-    public decimal Saldo =  1000;
+    public decimal Saldo = 1000;
 
     private Dictionary<string, int> EstoqueDeSkins = new Dictionary<string, int>
        {
@@ -15,7 +15,7 @@ public class Estoque
 
 
 
-     public void ExibirEstoque()
+    public void ExibirEstoque()
     {
         foreach (var estoque in EstoqueDeSkins)
         {
@@ -26,43 +26,40 @@ public class Estoque
                 Console.WriteLine($"Valor da skin {valor}");
                 Console.WriteLine("--------------------------------------");
             }
-      }
+        }
     }
-    
+
     public void MostrarSaldo()
     {
-        Console.WriteLine("*********");
+        Console.WriteLine("****************************");
         Console.WriteLine($"Seu saldo e de: {Saldo}");
-        Console.WriteLine("*********");
-
+        Console.WriteLine("****************************");
     }
 
 
     public void Executar()
     {
-    var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
-    string skinCompradaPeloUsuario = Console.ReadLine()!;
+        var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int>(EstoqueDeSkins);
+        string skinCompradaPeloUsuario = Console.ReadLine()!;
 
-    // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
+        // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
 
-    if(SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
+        if (SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
         {
-            foreach(var skincomprar in SkinEscolhidaQueDesejaComprar.Values)
+            int skinGet = SkinEscolhidaQueDesejaComprar[skinCompradaPeloUsuario];
+
+            if (skinGet >= Saldo)
             {
-                Console.WriteLine($"Aparece {skincomprar}");
+                Console.WriteLine($"Voce nao tem saldo suficiente para comprar essa skin {skinGet}");
             }
-            foreach (var skintexto in SkinEscolhidaQueDesejaComprar.Keys )
+            else
             {
-                Console.WriteLine($"Aparece {skintexto}");
+                Console.WriteLine($"Valor da skin comprada e de {skinGet}");
+                System.Console.WriteLine("------------------------------------------------------");
             }
 
-
-
-            Console.WriteLine("Sucesso");
-            Console.WriteLine($"Voce compru a skin {skinCompradaPeloUsuario}");
-            // Aqui temos que fazer uma validacao, se o Saldo para comprar e menor ou maior que a skin
-
-        }else
+        }
+        else
         {
             Console.WriteLine("Fracasso");
         }
