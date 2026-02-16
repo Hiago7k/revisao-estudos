@@ -1,28 +1,34 @@
+using System.ComponentModel;
+
 namespace revisar_conceitos_basicos.Components;
 
     public class DadosVenda
     {
+        public List<string> InfoUsuarios { get; set; } = new List<string>();
         
-        public string stemGuardOnOff;
-        public string skinsSelecionadas;
-        public string tradeURl;
-        public string telefone;
+        public string stemGuardOnOff {get; set; }
+        public string skinsSelecionadas {get; set; }
+        public string tradeURl {get; set; }
+        public string teleFone {get; set; }
 
-    public DadosVenda(string stemGuardOnOff, string skinsSelecionadas, string tradeURl, string telefone)
+        public DadosVenda(string stramguardonoff, string skinsselecionadas, string tradeurl, string telefone)
     {
-        this.stemGuardOnOff = stemGuardOnOff;
-        this.skinsSelecionadas = skinsSelecionadas;
-        this.tradeURl = tradeURl;
-        this.telefone = telefone;
+        stemGuardOnOff = stramguardonoff;
+        skinsSelecionadas = skinsselecionadas;
+        tradeURl = tradeurl;
+        teleFone = telefone;
     }
 
 
-    public void ExibirDadosDoUsuario()
+    public void SalvarDados()
     {
         Console.WriteLine(stemGuardOnOff);
+        InfoUsuarios.Add(stemGuardOnOff);
         Console.WriteLine(skinsSelecionadas);
+        InfoUsuarios.Add(skinsSelecionadas);
         Console.WriteLine(tradeURl);
-        Console.WriteLine(telefone);
+        InfoUsuarios.Add(tradeURl);
+        Console.WriteLine(teleFone);
+        InfoUsuarios.Add(teleFone);
     }
-
 }

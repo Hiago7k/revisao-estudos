@@ -3,7 +3,6 @@ using Microsoft.VisualBasic;
 using revisar_conceitos_basicos.Components;
 using revisar_conceitos_basicos.Componentsp;
 
-
 Console.WriteLine("==================================================");
 Console.WriteLine("Seja bem vindo a loja de skins de cs 2");
 Console.WriteLine("Digite uma tecla para continuar");
@@ -23,7 +22,7 @@ Console.WriteLine("***************************************");
 int escolha = Convert.ToInt32(Console.ReadLine()!);
 
 var EstoqueSkins = new Estoque();
-
+var Dados = new DadosVenda();
 
 
 switch (escolha)
@@ -42,14 +41,18 @@ switch (escolha)
         Console.WriteLine("\n Por gentileza preencha o formulario abaixo, para vender suas skins!");
         Console.WriteLine("Possui Steam Guard?");
         string stemGuardOnOff =  Console.ReadLine()!;
+        InfoUsuarios.Add(stemGuardOnOff);
         Console.WriteLine("Quais Skins deseja vender, caso deseja vender o inventario todo, apenas diga sim?");
         string skinsSelecionadas = Console.ReadLine()!;
         Console.WriteLine("Por gentileza informe seu Trade URl!");
         string tradeURl = Console.ReadLine()!;
         Console.WriteLine("Por gentileza informe seu telefone com dd ()");
         string telefone = Console.ReadLine()!;
-        Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
-        
+        //Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
+        Console.WriteLine("Confirme abaixo se seus dados estao certos!");
+        //
+        Console.WriteLine("---------------------------------------------------------------------------------------------------");
+
         
 
         break;
