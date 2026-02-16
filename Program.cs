@@ -9,7 +9,6 @@ Console.WriteLine("2. vender skins: ");
 Console.WriteLine("3. Comprar skins: ");
 int escolha = Convert.ToInt32(Console.ReadLine()!);
 
-var Saldo = new SaldoNaLoja(1000);
 var EstoqueSkins = new Estoque();
 
 switch (escolha)
@@ -24,7 +23,7 @@ switch (escolha)
     case 3:
 
         Console.WriteLine("Seu valor disponivel para gastar e de!");
-        Saldo.MostrarSaldo();
+        EstoqueSkins.MostrarSaldo();
         Console.WriteLine("Por gentileza digite a skin que deseja comprar: ");
         
         EstoqueSkins.Executar();

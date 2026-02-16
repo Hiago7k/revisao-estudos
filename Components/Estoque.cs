@@ -3,6 +3,8 @@ namespace revisar_conceitos_basicos.Components;
 
 public class Estoque
 {
+    public decimal Saldo =  1000;
+
     private Dictionary<string, int> EstoqueDeSkins = new Dictionary<string, int>
        {
         {"AkReadLine", 70},
@@ -10,6 +12,9 @@ public class Estoque
         {"DesertEaglePrintStream", 230},
         {"GlockFade", 5000}
       };
+
+
+
      public void ExibirEstoque()
     {
         foreach (var estoque in EstoqueDeSkins)
@@ -23,18 +28,40 @@ public class Estoque
             }
       }
     }
+    
+    public void MostrarSaldo()
+    {
+        Console.WriteLine("*********");
+        Console.WriteLine($"Seu saldo e de: {Saldo}");
+        Console.WriteLine("*********");
+
+    }
+
 
     public void Executar()
     {
     var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
     string skinCompradaPeloUsuario = Console.ReadLine()!;
 
-      // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
+    // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
 
     if(SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
         {
+            foreach(var skincomprar in SkinEscolhidaQueDesejaComprar.Values)
+            {
+                Console.WriteLine($"Aparece {skincomprar}");
+            }
+            foreach (var skintexto in SkinEscolhidaQueDesejaComprar.Keys )
+            {
+                Console.WriteLine($"Aparece {skintexto}");
+            }
+
+
+
             Console.WriteLine("Sucesso");
             Console.WriteLine($"Voce compru a skin {skinCompradaPeloUsuario}");
+            // Aqui temos que fazer uma validacao, se o Saldo para comprar e menor ou maior que a skin
+
         }else
         {
             Console.WriteLine("Fracasso");
