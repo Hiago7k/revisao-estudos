@@ -18,11 +18,13 @@ public class Estoque
         foreach (var estoque in EstoqueDeSkins)
         {
             Console.Clear();
-            Console.WriteLine($"Skins disponiveis no estoque {estoque.Key}");
+            Console.WriteLine("*************************************************");
+            Console.WriteLine($"Estoque atualizado... ");
+            Console.WriteLine("*************************************************");
 
-            foreach (var valor in estoque.Key)
+            foreach (var valor in EstoqueDeSkins)
             {
-                Console.WriteLine($"Valor da skin {valor}");
+                Console.WriteLine($"Skins disponiveil no estoque{valor}");
                 Console.WriteLine("--------------------------------------");
             }
         }
