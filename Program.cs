@@ -34,11 +34,23 @@ switch (escolha)
         break;
 
     case 2:
+        Console.Clear();
+        Console.WriteLine("----------------------------");
         Console.WriteLine("Como vender suas skins");
+        Console.WriteLine("----------------------------");
 
-
-        // Vender SKins
-
+        Console.WriteLine("\n Por gentileza preencha o formulario abaixo, para vender suas skins!");
+        Console.WriteLine("Possui Steam Guard?");
+        string stemGuardOnOff =  Console.ReadLine()!;
+        Console.WriteLine("Quais Skins deseja vender, caso deseja vender o inventario todo, apenas diga sim?");
+        string skinsSelecionadas = Console.ReadLine()!;
+        Console.WriteLine("Por gentileza informe seu Trade URl!");
+        string tradeURl = Console.ReadLine()!;
+        Console.WriteLine("Por gentileza informe seu telefone com dd ()");
+        string telefone = Console.ReadLine()!;
+        Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
+        
+        
 
         break;
 
