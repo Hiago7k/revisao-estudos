@@ -5,28 +5,12 @@ public class Estoque
 {
     private Dictionary<string, int> EstoqueDeSkins = new Dictionary<string, int>
        {
-        {"Ak ReadLine", 70},
-        {"Awp RedLine", 130},
-        {"Desert Eagle PrintStream", 230},
-        {"Glock Fade", 5000}
+        {"AkReadLine", 70},
+        {"AwpRedLine", 130},
+        {"DesertEaglePrintStream", 230},
+        {"GlockFade", 5000}
       };
-
-    public void Executar()
-    {
-      var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
-      string skinCompradaPeloUsuario = Console.ReadLine()!;
-    if(SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
-        {
-            Console.WriteLine("Sucesso");
-        }else
-        {
-            Console.WriteLine("Fracasso");
-        }
-
-    }
-
-
-    public void ExibirEstoque()
+     public void ExibirEstoque()
     {
         foreach (var estoque in EstoqueDeSkins)
         {
@@ -37,6 +21,23 @@ public class Estoque
                 Console.WriteLine($"Valor da skin {valor}");
                 Console.WriteLine("--------------------------------------");
             }
+      }
+    }
+
+    public void Executar()
+    {
+    var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int> (EstoqueDeSkins);
+    string skinCompradaPeloUsuario = Console.ReadLine()!;
+
+      // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
+
+    if(SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
+        {
+            Console.WriteLine("Sucesso");
+            Console.WriteLine($"Voce compru a skin {skinCompradaPeloUsuario}");
+        }else
+        {
+            Console.WriteLine("Fracasso");
         }
     }
 }
