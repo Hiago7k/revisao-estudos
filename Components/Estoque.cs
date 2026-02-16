@@ -13,12 +13,11 @@ public class Estoque
         {"GlockFade", 5000}
       };
 
-
-
     public void ExibirEstoque()
     {
         foreach (var estoque in EstoqueDeSkins)
         {
+            Console.Clear();
             Console.WriteLine($"Skins disponiveis no estoque {estoque.Key}");
 
             foreach (var valor in estoque.Key)
@@ -31,18 +30,16 @@ public class Estoque
 
     public void MostrarSaldo()
     {
+        Console.Clear();
         Console.WriteLine("****************************");
         Console.WriteLine($"Seu saldo e de: {Saldo}");
         Console.WriteLine("****************************");
     }
 
-
     public void Executar()
     {
         var SkinEscolhidaQueDesejaComprar = new Dictionary<string, int>(EstoqueDeSkins);
         string skinCompradaPeloUsuario = Console.ReadLine()!;
-
-        // EstoqueDeSkins[skinCompradaPeloUsuario] =  EstoqueDeSkins;
 
         if (SkinEscolhidaQueDesejaComprar.ContainsKey(skinCompradaPeloUsuario))
         {
@@ -54,14 +51,15 @@ public class Estoque
             }
             else
             {
-                Console.WriteLine($"Valor da skin comprada e de {skinGet}");
+                Console.Clear();
+                System.Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine($"Sucesso voce comprou a skin {skinCompradaPeloUsuario} pelo valor de R$ {skinGet}");
                 System.Console.WriteLine("------------------------------------------------------");
             }
-
         }
         else
         {
-            Console.WriteLine("Fracasso");
+            Console.WriteLine("Algo falhou, por gentileza tente novamente!");
         }
     }
 }
