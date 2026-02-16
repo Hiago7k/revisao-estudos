@@ -32,12 +32,4 @@ namespace revisar_conceitos_basicos.Components;
         InfoUsuarios.Add(teleFone);
     }
 
-    public void MostrarDados()
-    {
-        foreach(var dados in InfoUsuarios)
-        {
-            Console.WriteLine(dados);
-        }
-    }
-
 }

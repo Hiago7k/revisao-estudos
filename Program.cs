@@ -33,29 +33,38 @@ switch (escolha)
 
     case 2:
         Console.Clear();
-        Console.WriteLine("----------------------------");
-        Console.WriteLine("Como vender suas skins");
-        Console.WriteLine("----------------------------");
+       
+        Console.WriteLine("------------------------------------------------------------------------------");
+        Console.WriteLine("\nPor gentileza preencha o formulario abaixo, para vender suas skins!");
+        Console.WriteLine("------------------------------------------------------------------------------");
 
-        Console.WriteLine("\n Por gentileza preencha o formulario abaixo, para vender suas skins!");
         Console.WriteLine("Possui Steam Guard?");
         string stemGuardOnOff =  Console.ReadLine()!;
-        Console.WriteLine("Quais Skins deseja vender, caso deseja vender o inventario todo, apenas diga sim?");
+        Console.Clear();
+        Console.WriteLine("Quais Skins deseja vender, caso deseja vender o inventario todo, digita Todos");
         string skinsSelecionadas = Console.ReadLine()!;
+        Console.Clear();
         Console.WriteLine("Por gentileza informe seu Trade URl!");
         string tradeURl = Console.ReadLine()!;
+        Console.Clear();
         Console.WriteLine("Por gentileza informe seu telefone com dd ()");
         string telefone = Console.ReadLine()!;
-        //Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
+        Console.Clear();
         Console.WriteLine("Confirme abaixo se seus dados estao certos!");
         var Dados = new DadosVenda(stemGuardOnOff, skinsSelecionadas, tradeURl, telefone);
         Dados.SalvarDados();
-        Dados.MostrarDados();
-        
 
+     Console.Clear();
+        Console.WriteLine("---------------------------------------------------------------------------------------------------");
+        Console.WriteLine("Suas Informacoes abaixo!");
+        Console.WriteLine($"SteamGuard: {Dados.stemGuardOnOff}");
+        Console.WriteLine($"Oque deseja vender: {Dados.skinsSelecionadas}");
+        Console.WriteLine($"Seu trade Url: {Dados.tradeURl}");
+        Console.WriteLine($"Seu telefone para contato:  {Dados.teleFone}");
         Console.WriteLine("---------------------------------------------------------------------------------------------------");
 
-        
+         Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
+
 
         break;
 
