@@ -25,30 +25,21 @@ var EstoqueSkins = new Estoque();
 switch (escolha)
 {
     case 1:
-        Console.WriteLine("Atualmente essas sao nossas skins disponiveis para compra");
         EstoqueSkins.ExibirEstoque();
         break;
-
     case 2:
         Console.Clear();
-        // Dados.SalvarDados();
-
         var DadosDaSkin = new DadosVenda("", "", "", "");
         DadosDaSkin.OpcaoVenda();
-
         break;
-
     case 3:
         Console.WriteLine("Por gentileza digite a skin que deseja comprar: ");
-
         EstoqueSkins.Executar();
         break;
-
     case 4:
         Console.WriteLine("Seu valor disponivel para gastar e de!");
         EstoqueSkins.MostrarSaldo();
         break;
-
     case 0:
         break;
 

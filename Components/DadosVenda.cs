@@ -50,7 +50,6 @@ public class DadosVenda
         string telefone = Console.ReadLine()!;
         Console.Clear();
         Console.WriteLine("Confirme abaixo se seus dados estao certos!");
-        // var Dados = new DadosVenda(stemGuardOnOff, skinsSelecionadas, tradeURl, telefone);
 
         Console.Clear();
         Console.WriteLine("---------------------------------------------------------------------------------------------------");

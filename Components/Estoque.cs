@@ -18,6 +18,7 @@ public class Estoque
         foreach (var estoque in EstoqueDeSkins)
         {
             Console.Clear();
+            Console.WriteLine("Atualmente essas sao nossas skins disponiveis para compra");
             Console.WriteLine("*************************************************");
             Console.WriteLine($"Estoque atualizado... ");
             Console.WriteLine("*************************************************");
