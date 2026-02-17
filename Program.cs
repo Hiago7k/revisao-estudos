@@ -10,7 +10,6 @@ Console.WriteLine("==================================================");
 Console.ReadKey();
 Console.Clear();
 
-
 Console.WriteLine("***************************************");
 Console.WriteLine("Oque voce busca hoje");
 Console.WriteLine("1. Ver nosso estoque de skins: ");
@@ -23,7 +22,6 @@ int escolha = Convert.ToInt32(Console.ReadLine()!);
 
 var EstoqueSkins = new Estoque();
 
-
 switch (escolha)
 {
     case 1:
@@ -33,38 +31,10 @@ switch (escolha)
 
     case 2:
         Console.Clear();
-       
-        Console.WriteLine("------------------------------------------------------------------------------");
-        Console.WriteLine("\nPor gentileza preencha o formulario abaixo, para vender suas skins!");
-        Console.WriteLine("------------------------------------------------------------------------------");
+        // Dados.SalvarDados();
 
-        Console.WriteLine("Possui Steam Guard?");
-        string stemGuardOnOff =  Console.ReadLine()!;
-        Console.Clear();
-        Console.WriteLine("Quais Skins deseja vender, caso deseja vender o inventario todo, digita Todos");
-        string skinsSelecionadas = Console.ReadLine()!;
-        Console.Clear();
-        Console.WriteLine("Por gentileza informe seu Trade URl!");
-        string tradeURl = Console.ReadLine()!;
-        Console.Clear();
-        Console.WriteLine("Por gentileza informe seu telefone com dd ()");
-        string telefone = Console.ReadLine()!;
-        Console.Clear();
-        Console.WriteLine("Confirme abaixo se seus dados estao certos!");
-        var Dados = new DadosVenda(stemGuardOnOff, skinsSelecionadas, tradeURl, telefone);
-        Dados.SalvarDados();
-
-     Console.Clear();
-        Console.WriteLine("---------------------------------------------------------------------------------------------------");
-        Console.WriteLine("Suas Informacoes abaixo!");
-        Console.WriteLine($"SteamGuard: {Dados.stemGuardOnOff}");
-        Console.WriteLine($"Oque deseja vender: {Dados.skinsSelecionadas}");
-        Console.WriteLine($"Seu trade Url: {Dados.tradeURl}");
-        Console.WriteLine($"Seu telefone para contato:  {Dados.teleFone}");
-        Console.WriteLine("---------------------------------------------------------------------------------------------------");
-
-         Console.WriteLine("Um atendente da nossa equipe, lhe retornar com um orcamento justo pelas suas skins! obrigado!");
-
+        var DadosDaSkin = new DadosVenda("", "", "", "");
+        DadosDaSkin.OpcaoVenda();
 
         break;
 
@@ -77,10 +47,10 @@ switch (escolha)
     case 4:
         Console.WriteLine("Seu valor disponivel para gastar e de!");
         EstoqueSkins.MostrarSaldo();
-    break;
+        break;
 
     case 0:
-    break;
+        break;
 
     default:
         Console.WriteLine("Opcao invalida por gentileza escolha uma opcao valida!");
